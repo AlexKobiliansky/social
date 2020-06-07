@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PageContent.module.css'
+import styles from './PageContent.module.sass'
 import Header from "../Header/Header";
 import Content from "../Content/Content";
 

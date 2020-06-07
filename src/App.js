@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.sass';
 import LeftSide from "./components/LeftSide/LeftSide";
 import PageContent from "./components/PageContent/PageContent";
 

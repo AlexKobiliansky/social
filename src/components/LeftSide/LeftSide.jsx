@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './LeftSide.module.css'
+import styles from './LeftSide.module.sass'
 
 function LeftSide () {
     return  (

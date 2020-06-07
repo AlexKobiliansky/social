@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './NewPost.module.css';
+import styles from './NewPost.module.sass';
 
 function NewPost() {
     return (

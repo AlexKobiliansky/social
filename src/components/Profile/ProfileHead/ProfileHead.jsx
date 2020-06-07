@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './ProfileHead.module.css'
+import styles from './ProfileHead.module.sass'
 
 function ProfileHead() {
     return (
