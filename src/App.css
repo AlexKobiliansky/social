@@ -44,63 +44,10 @@ ul {
 
 
 
-.leftSide {
-    position: fixed;
-    background-color: #fff;
-    z-index: 10000;
-    left: 0;
-    top: 0;
-    display: block;
-    width: 268px;
-    padding: 20px 10px;
-    height: 100%;
 
-}
 
-.leftsideLogo {
-    width: 119px;
-}
 
-.container {
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    max-width: 1000px;
-}
 
-.pageContent {
-    margin-left: 275px;
-}
 
-.mainHead {
-    position: fixed;
-    left: 275px;
-    top: 0;
-    width: calc(100% - 275px);
-    z-index: 5;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.headPhoto {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-left: 12px;
-}
 
-.headPhoto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.content {
-    margin-top: 60px;
-}

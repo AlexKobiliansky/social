@@ -1,0 +1,16 @@
+.leftSide {
+    position: fixed;
+    background-color: #fff;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 268px;
+    padding: 20px 10px;
+    height: 100%;
+
+}
+
+.logo {
+    width: 119px;
+}

@@ -1,19 +1,20 @@
 import React from "react";
+import styles from './Header.module.css'
 
 function Header(){
     return (
-        <header className="mainHead">
-            <form className="searchForm">
+        <header className={styles.header}>
+            <form className={styles.searchForm}>
                 <label>
                     <input type="text" placeholder="Найдите друзей, видео и т.д."/>
                 </label>
             </form>
 
-            <div className="headNav">
-                <a href="/" className="headName">Алексей Кобылянский</a>
-                <a href="/" className="headChats">chats</a>
-                <a href="/" className="headNotifications">notifications</a>
-                <a href="/" className="headPhoto">
+            <div className={styles.nav}>
+                <a href="/" className={styles.name}>Алексей Кобылянский</a>
+                <a href="/" className={styles.chats}>chats</a>
+                <a href="/" className={styles.notifications}>notifications</a>
+                <a href="/" className={styles.myPhoto}>
                     <img src="/img/photo.jpg" alt="alt" className="imgResponsive"/>
                 </a>
             </div>

@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './LeftSide.module.css'
 
 function LeftSide () {
     return  (
-        <aside className="leftSide">
-            <a href="/" className="logo">
-                <img src="/img/logo.png" alt="Aleko social network" className="imgResponsive leftsideLogo"/>
+        <aside className={styles.leftSide}>
+            <a href="/">
+                <img src="/img/logo.png" alt="Aleko social network" className={styles.logo + " imgResponsive"}/>
             </a>
             <nav className="mainMnu">
                 <ul>
