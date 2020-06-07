@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*:before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::selection {
+    background-color: #377dff;
+    color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    font-size: 16px;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.5;
+    overflow-x: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.imgResponsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a, li, button {
+    outline: none!important;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+.leftSide {
+    position: fixed;
+    background-color: #fff;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 268px;
+    padding: 20px 10px;
+    height: 100%;
+
+}
+
+.leftsideLogo {
+    width: 119px;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 1000px;
+}
+
+.pageContent {
+    margin-left: 275px;
+}
+
+.mainHead {
+    position: fixed;
+    left: 275px;
+    top: 0;
+    width: calc(100% - 275px);
+    z-index: 5;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headPhoto {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+
+.headPhoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    margin-top: 60px;
 }
