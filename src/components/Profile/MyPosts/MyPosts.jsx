@@ -8,13 +8,14 @@ function MyPosts() {
         <div>
             <NewPost />
             <div className="posts">
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
+                <Post message="Post 1"/>
+                <Post message="Post 2"/>
+                <Post message="Post 3"/>
+                <Post message="Post 4"/>
+                <Post message="Post 5"/>
+                <Post message="Post 6"/>
+                <Post message="Post 7"/>
+                <Post message="Post 8"/>
             </div>
         </div>
     )

@@ -9,7 +9,7 @@ function Profile(){
     return (
         <div>
             <ProfileHead />
-            <div className="profileContent">
+            <div className={styles.profileContent}>
                 <MyPosts />
                 <RightSide />
             </div>
