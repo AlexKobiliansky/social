@@ -6,11 +6,11 @@ import PostBottom from "./PostBottom/PostBottom";
 function Post(props){
     return (
         <div className={styles.post}>
-            <PostTop />
+            <PostTop name={props.name} ava={props.ava} time={props.time}/>
             <div className={styles.postContent}>
                 {props.message}
             </div>
-            <PostBottom />
+            <PostBottom likes={props.likes} comments={props.comments}/>
         </div>
         )
 

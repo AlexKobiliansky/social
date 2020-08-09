@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './LeftSide.module.sass'
+import {NavLink} from "react-router-dom";
 
 function LeftSide () {
     return  (
@@ -9,16 +10,17 @@ function LeftSide () {
             </a>
             <nav className="mainMnu">
                 <ul>
-                    <li><a href="#0">Чаты</a></li>
-                    <li><a href="#0">Новости</a></li>
-                    <li><a href="#0">Друзья</a></li>
-                    <li><a href="#0">Видео</a></li>
-                    <li><a href="#0">Группы</a></li>
-                    <li><a href="#0">Курсы</a></li>
-                    <li><a href="#0">Вакансии</a></li>
-                    <li><a href="#0">Блоги</a></li>
-                    <li><a href="#0">Галерея</a></li>
-                    <li><a href="#0">События</a></li>
+                    <li><NavLink to="/profile" activeClassName={styles.active}>Профиль</NavLink></li>
+                    <li><NavLink to="/chats" activeClassName={styles.active}>Чаты</NavLink></li>
+                    <li><NavLink to="/" activeClassName={styles.active}>Новости</NavLink></li>
+                    <li><NavLink to="/" activeClassName={styles.active}>Друзья</NavLink></li>
+                    <li><NavLink to="/" activeClassName={styles.active}>Видео</NavLink></li>
+                    <li><NavLink to="/" activeClassName={styles.active}>Группы</NavLink></li>
+                    <li><NavLink to="/" activeClassName={styles.active}>Курсы</NavLink></li>
+                    <li><NavLink to="/" activeClassName={styles.active}>Вакансии</NavLink></li>
+                    <li><NavLink to="/" activeClassName={styles.active}>Блоги</NavLink></li>
+                    <li><NavLink to="/" activeClassName={styles.active}>Галерея</NavLink></li>
+                    <li><NavLink to="/" activeClassName={styles.active}>События</NavLink></li>
                 </ul>
             </nav>
         </aside>

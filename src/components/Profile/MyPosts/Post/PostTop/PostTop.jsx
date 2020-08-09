@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./PostTop.module.sass"
 
-function PostTop(){
+function PostTop(props){
     return (
         <div className={styles.postTop}>
-            <img src="/img/avatars/avatar-1.jpg" alt="alt" className="avatar"/>
+            <img src={props.ava} alt={props.name} className="avatar"/>
             <div className={styles.info}>
-                <div className={styles.name}>Мария Шепелева</div>
-                <div className={styles.time}>5 часов</div>
+                <div className={styles.name}>{props.name}</div>
+                <div className={styles.time}>{props.time}</div>
             </div>
         </div>
     );
