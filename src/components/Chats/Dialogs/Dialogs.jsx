@@ -2,14 +2,13 @@ import React from "react";
 import styles from "./Dialogs.module.sass"
 import DialogItem from "./DialogItem/DialogItem";
 
-function Dialogs() {
+function Dialogs(props) {
+
+    let dialogsElements = props.dialogs.map(d => <DialogItem img={d.img} name={d.name} time={d.time} desc={d.desc} id={d.id}/>)
+
     return (
         <div className={styles.dialogs}>
-            <DialogItem img="/img/avatars/avatar-1.jpg" name="Вика Баранова lorem adasdas asdasdasd asdasdasdasdadasda" time="позавчера" desc="Lorem ipsum dolor sit amet."/>
-            <DialogItem img="/img/avatars/avatar-2.jpg" name="Лиза" time="3 часа" desc="Lorem ipsum dolor sit amet."/>
-            <DialogItem img="/img/avatars/avatar-3.jpg" name="Черный парень" time="12 часов" desc="Lorem ipsum dolor sit amet."/>
-            <DialogItem img="/img/avatars/avatar-4.jpg" name="Майкл Оуэн" time="вчера" desc="Lorem ipsum dolor sit amet."/>
-            <DialogItem img="/img/avatars/avatar-5.jpg" name="Кира Найтли" time="23.01.2019" desc="Lorem ipsum dolor sit amet."/>
+            {dialogsElements}
         </div>
     )
 }

@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./DialogItem.module.sass";
+import {NavLink} from "react-router-dom";
 
 function DialogItem(props) {
     return (
-        <div className={styles.dialogItem}>
+        <NavLink className={styles.dialogItem} to={"/chats/" + props.id}>
             <div className={styles.photo}>
                 <img src={props.img} alt={props.name}/>
             </div>
@@ -17,7 +18,7 @@ function DialogItem(props) {
                     {props.desc}
                 </div>
             </div>
-        </div>
+        </NavLink>
     )
 }
 

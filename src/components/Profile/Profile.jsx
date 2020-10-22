@@ -5,12 +5,12 @@ import ProfileHead from "./ProfileHead/ProfileHead";
 import MyPosts from "./MyPosts/MyPosts";
 import RightSide from "./RightSide/RightSide";
 
-function Profile(){
+function Profile(props){
     return (
         <div>
             <ProfileHead />
             <div className={styles.profileContent}>
-                <MyPosts />
+                <MyPosts posts={props.posts}/>
                 <RightSide />
             </div>
         </div>

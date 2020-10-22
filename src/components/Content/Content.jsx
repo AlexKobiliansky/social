@@ -5,11 +5,11 @@ import Chats from "../Chats/Chats";
 import {Route} from "react-router-dom";
 
 
-function Content() {
+function Content(props) {
     return (
         <div className={styles.content}>
-            <Route path='/profile' component={Profile}/>
-            <Route path='/chats' component={Chats}/>
+            <Route path='/profile' render={() => <Profile posts={props.posts}/>} />
+            <Route path='/chats' render={() => <Chats messages={props.messages} dialogs={props.dialogs}/>}/>
         </div>
     )
 }

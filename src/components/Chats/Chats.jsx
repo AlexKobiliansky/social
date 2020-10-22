@@ -7,8 +7,8 @@ function Chats(props) {
     return (
         <div className={styles.chatsWrapper}>
             <div className={styles.chatsContent}>
-                <Dialogs />
-                <Messages />
+                <Dialogs dialogs={props.dialogs}/>
+                <Messages messages={props.messages}/>
             </div>
             <div className="rightSide">right side</div>
         </div>
