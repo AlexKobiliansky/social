@@ -9,7 +9,7 @@ function PageContent(props) {
         <div className={styles.pageContent}>
             <div className={styles.container}>
                 <Header />
-                <Content posts={props.posts} messages={props.messages} dialogs={props.dialogs}/>
+                <Content state={props.state}/>
             </div>
         </div>
     )

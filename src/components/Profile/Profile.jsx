@@ -10,7 +10,7 @@ function Profile(props){
         <div>
             <ProfileHead />
             <div className={styles.profileContent}>
-                <MyPosts posts={props.posts}/>
+                <MyPosts posts={props.state.posts}/>
                 <RightSide />
             </div>
         </div>

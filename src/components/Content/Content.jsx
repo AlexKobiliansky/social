@@ -8,10 +8,12 @@ import {Route} from "react-router-dom";
 function Content(props) {
     return (
         <div className={styles.content}>
-            <Route path='/profile' render={() => <Profile posts={props.posts}/>} />
-            <Route path='/chats' render={() => <Chats messages={props.messages} dialogs={props.dialogs}/>}/>
+            <Route path='/profile' render={() => <Profile state={props.state.profilePage}/>}/>
+            <Route path='/chats' render={() => <Chats state={props.state.chatsPage}/>}/>
         </div>
     )
+
+
 }
 
 export default Content;

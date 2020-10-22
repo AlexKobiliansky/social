@@ -10,7 +10,7 @@ function App(props) {
         <BrowserRouter>
             <div className="pageWrapper">
                 <LeftSide/>
-                <PageContent posts={props.posts} messages={props.messages} dialogs={props.dialogs}/>
+                <PageContent state={props.state} />
             </div>
         </BrowserRouter>
     );
