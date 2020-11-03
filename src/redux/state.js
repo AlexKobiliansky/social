@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 let state = {
     profilePage: {
         posts: [
@@ -46,7 +48,8 @@ let state = {
                 comments: '1',
                 likes: '0'
             },
-        ]
+        ],
+        newPostText: ''
     },
     chatsPage: {
         messages: [
@@ -108,7 +111,99 @@ let state = {
                 desc: 'Lorem ipsum dolor sit amet.'
             }
         ]
+    },
+    leftSide: {
+        mainMnu: [
+            {
+                id: 1,
+                path: "/profile",
+                icon: "/img/icons/main-mnu/mnu-icon-1.png",
+                name: "Профиль"
+            },
+            {
+                id: 2,
+                path: "/chats",
+                icon: "/img/icons/main-mnu/mnu-icon-2.png",
+                name: "Чаты"
+            },
+            {
+                id: 3,
+                path: "/3",
+                icon: "/img/icons/main-mnu/mnu-icon-3.png",
+                name: "Новости"
+            },
+            {
+                id: 4,
+                path: "/4",
+                icon: "/img/icons/main-mnu/mnu-icon-4.png",
+                name: "Друзья"
+            },
+            {
+                id: 5,
+                path: "/5",
+                icon: "/img/icons/main-mnu/mnu-icon-5.png",
+                name: "Видео"
+            },
+            {
+                id: 6,
+                path: "/6",
+                icon: "/img/icons/main-mnu/mnu-icon-6.png",
+                name: "Группы"
+            },
+            {
+                id: 7,
+                path: "/7",
+                icon: "/img/icons/main-mnu/mnu-icon-7.png",
+                name: "Курсы"
+            },
+            {
+                id: 8,
+                path: "/8",
+                icon: "/img/icons/main-mnu/mnu-icon-8.png",
+                name: "Вакансии"
+            },
+            {
+                id: 9,
+                path: "/9",
+                icon: "/img/icons/main-mnu/mnu-icon-9.png",
+                name: "Блоги"
+            },
+            {
+                id: 10,
+                path: "/10",
+                icon: "/img/icons/main-mnu/mnu-icon-10.png",
+                name: "Галерея"
+            },
+            {
+                id: 11,
+                path: "/1",
+                icon: "/img/icons/main-mnu/mnu-icon-11.png",
+                name: "События"
+            },
+        ]
     }
+}
+
+export let addPost = () => {
+    let newPost = {
+        id: 5,
+        name: 'Автор нового поста',
+        ava: '/img/avatars/avatar-1.jpg',
+        message: state.profilePage.newPostText,
+        time: 'только что',
+        comments: '0',
+        likes: '0'
+    };
+
+    state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state)
+}
+
+export let updateNewPostText = (newText) => {
+
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state)
 }
 
 export default state;

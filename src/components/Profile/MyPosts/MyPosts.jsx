@@ -2,6 +2,7 @@ import React from "react";
 import styles from './MyPosts.module.sass'
 import NewPost from "./NewPost/NewPost";
 import Post from "./Post/Post";
+import {updateNewPostText} from '../../../redux/state';
 
 function MyPosts(props) {
 
@@ -9,7 +10,7 @@ function MyPosts(props) {
 
     return(
         <div>
-            <NewPost />
+            <NewPost addPost={props.addPost} newPostText={props.newPostText} updateNewPostText={props.updateNewPostText}/>
             <div className="posts">
                 {postsElements}
             </div>
