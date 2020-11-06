@@ -12,8 +12,7 @@ function Profile(props){
             <ProfileHead />
             <div className={styles.profileContent}>
                 <MyPosts posts={props.profilePage.posts}
-                         addPost={props.addPost}
-                         updateNewPostText={props.updateNewPostText}
+                         dispatch={props.dispatch}
                          newPostText={props.profilePage.newPostText}/>
                 <RightSide />
             </div>

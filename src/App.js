@@ -11,7 +11,7 @@ function App(props) {
         <BrowserRouter>
             <div className="pageWrapper">
                 <LeftSide state={props.state.leftSide}/>
-                <PageContent state={props.state} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>
+                <PageContent state={props.state} dispatch={props.dispatch}/>
             </div>
         </BrowserRouter>
     );

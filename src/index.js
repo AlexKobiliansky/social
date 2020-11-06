@@ -1,5 +1,17 @@
-import {rerenderEntireTree} from "./render";
-import state from "./redux/state";
+import store from './redux/state';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import App from './App';
 
-rerenderEntireTree(state);
+let rerenderEntireTree = (state) => {
+    ReactDOM.render(
+        <React.StrictMode>
+            <App state={state} dispatch={store.dispatch.bind(store)}/>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
 
+rerenderEntireTree(store.getState());
+
+store.subscribe(rerenderEntireTree);

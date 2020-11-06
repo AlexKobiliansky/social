@@ -1,6 +1,8 @@
 import React from 'react';
-import styles from './NewPost.module.sass';
-import {rerenderEntireTree} from '../../../../render';
+import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../../redux/state';
+
+
+
 
 function NewPost(props) {
 
@@ -8,13 +10,13 @@ function NewPost(props) {
 
     let addPost = (e) => {
         if (e.key === 'Enter' && e.target.value) {
-            props.addPost();
+            props.dispatch(addPostActionCreator());
         }
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.updateNewPostText(text)
+        props.dispatch(updateNewPostTextActionCreator(text));
     }
 
     return (

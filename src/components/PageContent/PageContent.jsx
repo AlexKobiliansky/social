@@ -10,7 +10,7 @@ function PageContent(props) {
         <div className={styles.pageContent}>
             <div className={styles.container}>
                 <Header />
-                <Content state={props.state} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>
+                <Content state={props.state} dispatch={props.dispatch}/>
             </div>
         </div>
     )
