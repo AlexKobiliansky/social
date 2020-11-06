@@ -10,7 +10,7 @@ function Content(props) {
     return (
         <div className={styles.content}>
             <Route path='/profile' render={() => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch}/>}/>
-            <Route path='/chats' render={() => <Chats state={props.state.chatsPage}/>}/>
+            <Route path='/chats' render={() => <Chats state={props.state.chatsPage} dispatch={props.dispatch} />}/>
         </div>
     )
 

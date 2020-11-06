@@ -1,5 +1,7 @@
 const ADD_POST = 'ADD_POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
+const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY';
+const SEND_MESSAGE = 'SEND_MESSAGE';
 
 let store = {
     _state: {
@@ -112,7 +114,8 @@ let store = {
                     time: '23.01.2019',
                     desc: 'Lorem ipsum dolor sit amet.'
                 }
-            ]
+            ],
+            newMessageBody: ''
         },
         leftSide: {
             mainMnu: [
@@ -213,12 +216,27 @@ let store = {
         } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profilePage.newPostText = action.newText;
             this._callSubscriber(this._state);
+        } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
+            this._state.chatsPage.newMessageBody = action.body;
+            this._callSubscriber(this._state);
+        } else if (action.type === SEND_MESSAGE) {
+            let body = this._state.chatsPage.newMessageBody;
+            this._state.chatsPage.newMessageBody = '';
+            this._state.chatsPage.messages.push({
+                id: 10,
+                img: '/img/avatars/avatar-1.jpg',
+                content: body
+            });
+            this._callSubscriber(this._state);
         }
     }
 }
 
 export const addPostActionCreator = () => ({type: ADD_POST});
 export const updateNewPostTextActionCreator = (text) => ({ type: UPDATE_NEW_POST_TEXT, newText: text});
+
+export const sendMessageAC = () => ({type: SEND_MESSAGE});
+export const updateNewMessageBodyAC = (text) => ({ type: UPDATE_NEW_MESSAGE_BODY, body: text});
 
 
 export default store;
